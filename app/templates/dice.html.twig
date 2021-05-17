@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Dice 21 {% endblock %}
+
+{% block body %}
+<h2>Välj hur många tärningar du vill köra med:</h2>
+<form method="POST">
+    <input type="radio" id="one" name="diceChoice" value="one">
+    <label for="one">1</label><br>
+    <input type="radio" id="two" name="diceChoice" value="two">
+    <label for="two">2</label><br>
+    <br>
+    <input type="submit" value="Starta spelet!"></input>
+</form>
+<br>
+<br>
+<br>
+
+<h2>Du vs. Datorn</h2>
+<p>{{ win }} - {{ winComp }}</p>
+<br>
+<form method="POST">
+    <input type="submit" name="zero" value="Nollställ"></input>
+</form>
+{% endblock %}

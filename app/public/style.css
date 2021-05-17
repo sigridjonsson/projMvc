@@ -1,0 +1,60 @@
+.dice-sprite {
+    display: inline-block;
+    padding: 0;
+    margin: 0 4px 0 0;
+    width: 32px;
+    height: 32px;
+    background: url(dice-faces.jpg) no-repeat;
+}
+
+.dice-sprite.dice-1 { background-position: -160px 0; }
+.dice-sprite.dice-2 { background-position: -128px 0; }
+.dice-sprite.dice-3 { background-position: -96px 0; }
+.dice-sprite.dice-4 { background-position: -64px 0; }
+.dice-sprite.dice-5 { background-position: -32px 0; }
+.dice-sprite.dice-6 { background-position: 0 0; }
+
+#diceOne {
+    margin-left: 9px;
+}
+
+#diceTwo {
+    margin-left: 24px;
+}
+
+#diceThree {
+    margin-left: 24px;
+}
+
+#diceFour {
+    margin-left: 24px;
+}
+
+#diceFive {
+    margin-left: 24px;
+}
+
+table {
+    margin-top: 100px;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #78C2AD;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    margin-top: 20px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}

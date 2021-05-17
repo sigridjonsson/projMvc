@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Dice 21 {% endblock %}
+
+{% block body %}
+
+
+{% if total < 21 %}
+
+   <p>
+   {% for value in class %}
+       <i class="dice-sprite {{ value }}"></i>
+   {% endfor %}
+   </p>
+   <p>Summa: {{ total }}</p>
+   <form method="POST">
+       <input type="submit" name="btn" value="Slå igen!">
+   </form>
+   <br>
+   <form method="POST">
+       <input type="submit" name="btn" value="Stanna!">
+   </form>
+
+{% elseif total > 21 %}
+    <h1>Otur! Denna rundan vann datorn!</h1>
+    <p>Du fick: {{ total }}</p>
+
+{% elseif total == 21 %}
+    <h1>Grattis, du vann! +1 poäng!</h1>
+    <p>Du fick: {{ total }}</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Yatzy {% endblock %}
+
+{% block body %}
+
+{% if section < 7 %}
+<h1>Samla på {{ section }}:or</h1>
+<p>Klicka i de tärningar du vill spara!</p>
+<p>Du får kasta tärningarna 3 gånger.
+Nu har du kastat {{ rounds }} gång/gånger.</p>
+<h3>Din poäng: {{ scoreYatzy }}</h3>
+
+
+<p>
+    {% for value in listOfDices %}
+        <i class="dice-sprite {{ value }}"></i>
+    {% endfor %}
+</p>
+{% endif %}
+
+
+
+{% if (rounds < 3) and (section < 7) %}
+    <form method="POST">
+        <input type="checkbox" id="diceOne" name="diceOne" value="diceOne">
+        <input type="checkbox" id="diceTwo" name="diceTwo" value="diceTwo">
+        <input type="checkbox" id="diceThree" name="diceThree" value="diceThree">
+        <input type="checkbox" id="diceFour" name="diceFour" value="diceFour">
+        <input type="checkbox" id="diceFive" name="diceFive" value="diceFive">
+        <br>
+        <br>
+        <br>
+        <input type="submit" name="btn" value="Slå igen!">
+    </form>
+{% elseif (rounds == 3) and (section < 6) %}
+<form method="POST">
+        <input type="submit" name="btn" value="Slå igen!">
+    </form>
+{% endif %}
+
+{% if (rounds == 3) and (section == 6) %}
+    <form method="POST">
+        <input type="submit" name="btn" value="Resultat!">
+    </form>
+{% endif %}
+
+{% endblock %}

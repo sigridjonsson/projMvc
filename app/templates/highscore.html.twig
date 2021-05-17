@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Highscore {% endblock %}
+
+{% block body %}
+<h2>{{ info }}</h2>
+<p>Här är en tabell över de som har fått minst 50 poäng i Yatzy.</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Poäng</th>
+            <th>Datum</th>
+        </tr>
+    </thead>
+        {% for h in highscore %}
+            <tr>
+                <td>{{ h.id }}</td>
+                <td>{{ h.score }}</td>
+                <td>{{ h.date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
