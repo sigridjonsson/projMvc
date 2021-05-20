@@ -50,7 +50,7 @@ class DiceController extends AbstractController
     /**
      * @Route("/play", name="playGame")
     */
-    public function playGame(SessionInterface $session, Request $request)
+    public function playGame(SessionInterface $session, Request $request): Response
     {
 
         if ($request->getMethod() == 'POST') {
@@ -99,7 +99,7 @@ class DiceController extends AbstractController
     /**
      * @Route("/res", name="resGame")
     */
-    public function resGame(SessionInterface $session)
+    public function resGame(SessionInterface $session): Response
     {
         $session->set('totalComp', 0);
 

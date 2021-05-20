@@ -9,11 +9,11 @@ class ControllerIndexTest extends WebTestCase
 {
     public function testIndex()
     {
+        // self::bootKernel();
+
         $client = static::createClient();
         $client->request('GET', '/');
 
-        // $this->assertResponseIsSuccessful();
-        // $this->assertSelectorTextContains('h2', 'Välkommen!');
         $this->assertResponseStatusCodeSame(Response::HTTP_OK);
     }
 
@@ -22,8 +22,6 @@ class ControllerIndexTest extends WebTestCase
         $client = static::createClient();
         $client->request('GET', '/');
 
-        // $this->assertResponseIsSuccessful();
-        // $this->assertSelectorTextContains('h2', 'Välkommen!');
         $this->assertSelectorTextContains('h2', 'Välkommen!');
     }
 }
