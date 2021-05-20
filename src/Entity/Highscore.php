@@ -29,10 +29,10 @@ class Highscore
      */
     protected $date;
 
-    public function getId()
-    {
-        return $this->hsId;
-    }
+    // public function getId()
+    // {
+    //     return $this->hsId;
+    // }
 
     public function getScore()
     {
