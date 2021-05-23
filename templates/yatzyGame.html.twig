@@ -5,11 +5,16 @@
 {% block body %}
 
 {% if section < 7 %}
+<div class="rules">
+<h4>Regler:</h4>
+<ul>
+  <li>Klicka i de tärningar du vill spara.</li>
+  <li>Du får kasta tärningarna 3 gånger per omgång.
+  Nu har du kastat {{ rounds }} gång/gånger.</li>
+</ul>
+</div>
 <h1>Samla på {{ section }}:or</h1>
-<p>Klicka i de tärningar du vill spara!</p>
-<p>Du får kasta tärningarna 3 gånger.
-Nu har du kastat {{ rounds }} gång/gånger.</p>
-<h3>Din poäng: {{ scoreYatzy }}</h3>
+<br>
     {% if userName != " " %}
     <h3>Namn: {{ userName }}</h3>
     {% endif %}
@@ -36,10 +41,12 @@ Nu har du kastat {{ rounds }} gång/gånger.</p>
         <br>
         <input type="submit" name="btn" value="Slå igen!">
     </form>
+    <h3 class="score">Poäng: {{ scoreYatzy }}</h3>
 {% elseif (rounds == 3) and (section < 6) %}
 <form method="POST">
         <input type="submit" name="btn" value="Slå igen!">
     </form>
+    <h3 class="score">Poäng: {{ scoreYatzy }}</h3>
 {% endif %}
 
 {% if (rounds == 3) and (section == 6) %}

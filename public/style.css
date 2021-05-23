@@ -1,3 +1,10 @@
+.rules {
+    border: 2px solid black;
+    width: 40%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 .dice-sprite {
     display: inline-block;
     padding: 0;
@@ -13,6 +20,10 @@
 .dice-sprite.dice-4 { background-position: -64px 0; }
 .dice-sprite.dice-5 { background-position: -32px 0; }
 .dice-sprite.dice-6 { background-position: 0 0; }
+
+.score {
+    margin-top: 50px;
+}
 
 #diceOne {
     margin-left: 9px;
