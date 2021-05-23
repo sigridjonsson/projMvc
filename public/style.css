@@ -1,3 +1,11 @@
+.money {
+    float: right;
+    border: 2px solid black;
+    width: 40%;
+    padding: 20px;
+    margin-top: -320px;
+}
+
 .rules {
     border: 2px solid black;
     width: 40%;
