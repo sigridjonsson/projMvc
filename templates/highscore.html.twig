@@ -12,6 +12,7 @@
             <th> </th>
             <th>Poäng</th>
             <th>Datum</th>
+            <th>Spelare</th>
         </tr>
     </thead>
         {% for h in highscore %}
@@ -20,6 +21,7 @@
                 <td>{{ counter }}</td>
                 <td>{{ h.score }}</td>
                 <td>{{ h.date }}</td>
+                <td>{{ h.userName }}</td>
             </tr>
         {% endfor %}
     </table>

@@ -4,5 +4,11 @@
 
 {% block body %}
     <h2>{{ info }}</h2>
-    <a href="{{ link }}">Spela Yatzy!</a>
+    <p>Få minst 50 poäng för att hamna på highscore listan!<br>
+    Om du fyller i ditt namn nedan så visas det upp med ditt higscore.</p>
+    <form method="POST">
+        <label for="userName">Namn</label><br>
+        <input type="text" id="userName" name="usr" value=" ">
+        <input type="submit" value="Starta spelet!"></input>
+    </form>
 {% endblock %}

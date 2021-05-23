@@ -16,7 +16,7 @@ class YatzyController extends AbstractController
     /**
      * @Route("/yatzy", name="yatzy")
     */
-    public function welcome(SessionInterface $session): Response
+    public function welcome(SessionInterface $session, Request $request): Response
     {
         $session->set('rounds', 0);
         $session->set('section', 1);
@@ -28,9 +28,15 @@ class YatzyController extends AbstractController
         $session->set('dice4', true);
         $session->set('dice5', true);
 
+        if ($request->getMethod() == 'POST') {
+            $userName = $request->request->get("usr");
+            $session->set('userName', $userName);
+            return $this->redirectToRoute('playYatzy');
+        }
+
+
         return $this->render('yatzy.html.twig', [
-            'info' => 'YATZY',
-            'link' => 'playYatzy',
+            'info' => 'YATZY'
         ]);
     }
 
@@ -129,6 +135,7 @@ class YatzyController extends AbstractController
             'rounds' => $session->get('rounds'),
             'scoreYatzy' => $session->get('scoreYatzy'),
             'listOfDices' => $listOfDices,
+            'userName' => $session->get('userName'),
         ]);
     }
 
@@ -152,10 +159,11 @@ class YatzyController extends AbstractController
             $message = "Grattis!";
         }
 
-        if ($session->get('scoreYatzy') >= 50) {
+        if ($session->get('scoreYatzy') >= 10) {
             $highscore = new Highscore();
             $highscore->setScore($session->get('scoreYatzy'));
             $highscore->setDate();
+            $highscore->setUserName($session->get('userName'));
 
             $entityManager->persist($highscore);
             $entityManager->flush();

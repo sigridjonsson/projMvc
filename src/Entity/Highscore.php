@@ -29,6 +29,12 @@ class Highscore
      */
     protected $date;
 
+    /**
+     * @ORM\Column(type="string")
+     * @var string
+     */
+    protected $userName;
+
     public function getId()
     {
         return $this->hsId;
@@ -37,6 +43,11 @@ class Highscore
     public function getScore()
     {
         return $this->score;
+    }
+
+    public function getUserName()
+    {
+        return $this->userName;
     }
 
     public function getDate()
@@ -53,5 +64,10 @@ class Highscore
     {
         $time = new \DateTime("now");
         $this->date = $time->format('d/m/Y H:i:s');
+    }
+
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
     }
 }

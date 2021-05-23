@@ -10,6 +10,9 @@
 <p>Du får kasta tärningarna 3 gånger.
 Nu har du kastat {{ rounds }} gång/gånger.</p>
 <h3>Din poäng: {{ scoreYatzy }}</h3>
+    {% if userName != " " %}
+    <h3>Namn: {{ userName }}</h3>
+    {% endif %}
 
 
 <p>

@@ -11,5 +11,7 @@
           <field name="score" type="integer" />
 
           <field name="date" type="string" />
+
+          <field name="userName" type="string" />
       </entity>
 </doctrine-mapping>
