@@ -3,19 +3,21 @@
 {% block title %} Highscore {% endblock %}
 
 {% block body %}
+{% set counter = 0 %}
 <h2>{{ info }}</h2>
 <p>Här är en tabell över de som har fått minst 50 poäng i Yatzy.</p>
 <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
-            <th>Id</th>
+            <th> </th>
             <th>Poäng</th>
             <th>Datum</th>
         </tr>
     </thead>
         {% for h in highscore %}
+        {% set counter = counter + 1 %}
             <tr>
-                <td>{{ h.id }}</td>
+                <td>{{ counter }}</td>
                 <td>{{ h.score }}</td>
                 <td>{{ h.date }}</td>
             </tr>

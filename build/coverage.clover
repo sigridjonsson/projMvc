@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1621520565">
-  <project timestamp="1621520565">
+<coverage generated="1621524866">
+  <project timestamp="1621524866">
     <file name="/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/src/Controller/DiceController.php">
       <class name="App\Controller\DiceController" namespace="global">
         <metrics complexity="22" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="84" coveredstatements="0" elements="87" coveredelements="0"/>
@@ -287,8 +287,8 @@
       <line num="56" type="stmt" count="1"/>
       <metrics loc="57" ncloc="40" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="13" coveredelements="11"/>
     </file>
-    <file name="/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/src/Kernel.php">
-      <class name="App\Kernel" namespace="global">
+    <file name="/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/src/Kernel/Kernel.php">
+      <class name="App\Kernel\Kernel" namespace="global">
         <metrics complexity="6" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="17" coveredelements="0"/>
       </class>
       <line num="14" type="method" name="configureContainer" visibility="protected" complexity="3" crap="12" count="0"/>

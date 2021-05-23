@@ -1,28 +1,23 @@
-
 PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
-EE....                                                              6 / 6 (100%)
+E....                                                               5 / 5 (100%)
 
-Time: 00:00.111, Memory: 16.00 MB
+Time: 00:00.085, Memory: 16.00 MB
 
-There were 2 errors:
+There was 1 error:
 
-1) App\Controller\ControllerIndexTest::testIndex
+1) App\Controller\ControllerIndexTest::testTextIndex
 LogicException: You must set the KERNEL_CLASS environment variable to the fully-qualified class name of your Kernel in phpunit.xml / phpunit.xml.dist or override the "App\Controller\ControllerIndexTest::createKernel()" or "App\Controller\ControllerIndexTest::getKernelClass()" method.
 
 /Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/vendor/symfony/framework-bundle/Test/KernelTestCase.php:60
 /Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/vendor/symfony/framework-bundle/Test/KernelTestCase.php:102
 /Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/vendor/symfony/framework-bundle/Test/KernelTestCase.php:79
-/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/tests/Controller/ControllerIndexTest.php:13
-
-2) App\Controller\ControllerIndexTest::testTextIndex
-Error: Call to undefined method App\Controller\ControllerIndexTest::createClient()
-
-/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/tests/Controller/ControllerIndexTest.php:25
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/vendor/symfony/framework-bundle/Test/WebTestCase.php:46
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/tests/Controller/ControllerIndexTest.php:22
 
 ERRORS!
-Tests: 6, Assertions: 4, Errors: 2.
+Tests: 5, Assertions: 4, Errors: 1.
 
-Generating code coverage report in Clover XML format ... done [00:00.085]
+Generating code coverage report in Clover XML format ... done [00:00.090]
 
-Generating code coverage report in HTML format ... done [00:00.066]
+Generating code coverage report in HTML format ... done [00:00.060]

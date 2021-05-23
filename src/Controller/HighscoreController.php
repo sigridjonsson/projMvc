@@ -23,7 +23,8 @@ class HighscoreController extends AbstractController
 
         return $this->render('highscore.html.twig', [
             'info' => "Highscore",
-            'highscore' => $highscore
+            'highscore' => $highscore,
+            'rank' => 1
         ]);
     }
 }
