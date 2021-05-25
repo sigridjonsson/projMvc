@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use App\Dice\GraphicalDice;
 use App\Entity\Highscore;
+use App\Entity\Histogram;
 
 class YatzyController extends AbstractController
 {
@@ -169,6 +170,15 @@ class YatzyController extends AbstractController
             $entityManager->persist($highscore);
             $entityManager->flush();
         }
+
+        $histClass = new Histogram();
+        $histClass->setDices("");
+        $histClass->setScore($session->get('scoreYatzy'));
+        $histClass->setDate();
+        $histClass->setGame("Yatzy");
+
+        $entityManager->persist($histClass);
+        $entityManager->flush();
 
         return $this->render('yatzyGameRes.html.twig', [
             'scoreYatzy' => $session->get('scoreYatzy'),
