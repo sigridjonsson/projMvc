@@ -30,6 +30,7 @@ class DiceController extends AbstractController
 
         $session->set('diceNr', $session->get('diceNr') ?? null);
         $session->set('class', $session->get('class') ?? null);
+        $session->set('hist', "");
 
         if ($request->getMethod() == 'POST') {
             if ($request->get('diceChoice') == 'one') {
@@ -115,9 +116,19 @@ class DiceController extends AbstractController
             $session->set('bank', $remove);
         }
 
+
+
+        $hist = implode(", ", $res);
+        $hist .= " ," . $session->get('hist');
+        // $test = strrev($hist);
+        $session->set('hist', $hist);
+        // $allHist = "";
+        // $this->testidk .= $hist;
+
         return $this->render('diceGame.html.twig', [
             'total' => $session->get('total'),
             'class' => $session->get('class'),
+            'list' => $session->get('hist'),
         ]);
     }
 
@@ -191,10 +202,14 @@ class DiceController extends AbstractController
             $message = 'Oavgjort!';
         }
 
+        $fix = substr($session->get('hist'), 0, -2);
+        $histogram = strrev($fix);
+
         return $this->render('diceGameRes.html.twig', [
             'total' => $session->get('total'),
             'totalComp' => $session->get('totalComp'),
             'message' => $message,
+            'histogram' => $histogram
         ]);
     }
 }
