@@ -39,4 +39,17 @@ class HighscoreTest extends TestCase
         $res = $controller->getDate();
         $this->assertSame($exp, $res);
     }
+
+    /**
+     * Check that setDate() and getDate() works.
+     */
+    public function testUsername()
+    {
+        $controller = new Highscore();
+        $controller->setUserName("Sigrid");
+
+        $exp = "Sigrid";
+        $res = $controller->getUserName();
+        $this->assertSame($exp, $res);
+    }
 }

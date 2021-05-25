@@ -3,6 +3,7 @@
 {% block title %} Dice 21 {% endblock %}
 
 {% block body %}
+<div class="yatzyInfo">
 <h3>Välj hur många tärningar du vill köra med?</h3>
 <form method="POST">
     <input type="radio" id="one" name="diceChoice" value="one">
@@ -10,28 +11,26 @@
     <input type="radio" id="two" name="diceChoice" value="two">
     <label for="two">2</label><br>
     <br>
-    <h3>Hur mycket vill du satsa?</h3>
+    <br>
+    <h3>Hur mycket Bitcoins vill du satsa?</h3>
     <label for="money"></label>
     <input type="number" id="money" name="money" value="0" min="0" max={{ bitcoins / 2 }}>
     <br>
     <br>
+    <br>
     <input type="submit" value="Starta spelet!"></input>
 </form>
-<br>
-<br>
-<br>
-<br>
+</div>
 
+<div class="money">
 <h2>Du vs. Datorn</h2>
 <p>{{ win }} - {{ winComp }}</p>
-<br>
 <form method="POST">
     <input type="submit" name="zero" value="Nollställ"></input>
 </form>
 <br>
 <br>
 
-<div class="money">
 <h2>Vadslagning</h2>
 <p>Du - {{ bitcoins }} ฿</p>
 <p>Banken - {{ bank }} ฿</p>

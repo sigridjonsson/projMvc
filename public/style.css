@@ -1,9 +1,13 @@
+.yatzyInfo {
+    margin-top: 100px;
+}
+
 .money {
     float: right;
     border: 2px solid black;
     width: 40%;
     padding: 20px;
-    margin-top: -320px;
+    margin-top: -280px;
 }
 
 .rules {
