@@ -118,7 +118,6 @@ class DiceController extends AbstractController
         return $this->render('diceGame.html.twig', [
             'total' => $session->get('total'),
             'class' => $session->get('class'),
-            'gamble' => $session->get('gamble'),
         ]);
     }
 
@@ -138,6 +137,7 @@ class DiceController extends AbstractController
         $diff = 21 - $session->get('total');
         $diffComp = $session->get('totalComp') - 21;
 
+        $message = "";
 
         if ($session->get('total') == 21) {
             $something = $session->get('win');
@@ -195,8 +195,6 @@ class DiceController extends AbstractController
             'total' => $session->get('total'),
             'totalComp' => $session->get('totalComp'),
             'message' => $message,
-            'newamount' => $newAmount,
-            'remove' => $remove
         ]);
     }
 }

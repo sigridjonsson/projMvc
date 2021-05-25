@@ -149,6 +149,7 @@ class YatzyController extends AbstractController
     {
         require_once "../bin/bootstrap.php";
 
+        $message = "";
 
         if ($session->get('scoreYatzy') >= 63) {
             $score = $session->get('scoreYatzy');

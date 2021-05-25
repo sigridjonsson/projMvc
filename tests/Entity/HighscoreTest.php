@@ -7,7 +7,6 @@ namespace App\Entity;
 use PHPUnit\Framework\TestCase;
 use App\Entity\Highscore;
 
-
 /**
  * Test cases for the controller Debug.
  */
