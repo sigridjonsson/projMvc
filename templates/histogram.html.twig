@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Histogram {% endblock %}
+
+{% block body %}
+<h2>{{ info }}</h2>
+<p>Här är en tabell över de som har fått minst 50 poäng i Yatzy.</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tärningar</th>
+            <th>Poäng</th>
+            <th>Datum</th>
+            <th>Spel</th>
+        </tr>
+    </thead>
+        {% for h in histogram %}
+            <tr>
+                <td>{{ h.id }}</td>
+                <td>{{ h.dices }}</td>
+                <td>{{ h.score }}</td>
+                <td>{{ h.date }}</td>
+                <td>{{ h.game }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
