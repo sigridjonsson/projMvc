@@ -14,7 +14,7 @@ at BTH.
 
 Get going
 -----------------------------------
-To get going with the application install the essentials.
+Install the essentials to get going with the application.
 ```
 composer install
 ```

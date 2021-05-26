@@ -99,8 +99,12 @@ class DiceController extends AbstractController
         $hist = implode(", ", $res);
         $hist .= " ," . $session->get('hist');
         $session->set('hist', $hist);
+        $fix = substr($session->get('hist'), 0, -2);
+        $histogram = strrev($fix);
 
         require_once "../bin/bootstrap.php";
+
+        $done = false;
 
         if ($session->get('total') > 21) {
             $something = $session->get('winComp');
@@ -111,6 +115,7 @@ class DiceController extends AbstractController
             // Add gamble to bank
             $remove = $session->get('bank') + $session->get('gamble');
             $session->set('bank', $remove);
+            $done = true;
         } else if ($session->get('total') == 21) {
             $something = $session->get('win');
             $session->set('win', $something += 1);
@@ -120,10 +125,9 @@ class DiceController extends AbstractController
             // Remove gamble from bank
             $remove = $session->get('bank') - $session->get('gamble');
             $session->set('bank', $remove);
-        } else if ($session->get('total') >= 21) {
-            $fix = substr($session->get('hist'), 0, -2);
-            $histogram = strrev($fix);
-
+            $done = true;
+        }
+        if ($done) {
             $histClass = new Histogram();
             $histClass->setDices($histogram);
             $histClass->setScore($session->get('total'));

@@ -1,0 +1,38 @@
+ ------ ----------------------------------------------- 
+  Line   config/cli-config.php                          
+ ------ ----------------------------------------------- 
+  11     Variable $entityManager might not be defined.  
+ ------ ----------------------------------------------- 
+
+ ------ ------------------------------------ 
+  Line   src/Controller/DiceController.php   
+ ------ ------------------------------------ 
+  137    Undefined variable: $entityManager  
+  138    Undefined variable: $entityManager  
+  228    Undefined variable: $entityManager  
+  229    Undefined variable: $entityManager  
+ ------ ------------------------------------ 
+
+ ------ ---------------------------------------- 
+  Line   src/Controller/HighscoreController.php  
+ ------ ---------------------------------------- 
+  19     Undefined variable: $entityManager      
+ ------ ---------------------------------------- 
+
+ ------ ---------------------------------------- 
+  Line   src/Controller/HistogramController.php  
+ ------ ---------------------------------------- 
+  19     Undefined variable: $entityManager      
+ ------ ---------------------------------------- 
+
+ ------ ------------------------------------ 
+  Line   src/Controller/YatzyController.php  
+ ------ ------------------------------------ 
+  170    Undefined variable: $entityManager  
+  171    Undefined variable: $entityManager  
+  180    Undefined variable: $entityManager  
+  181    Undefined variable: $entityManager  
+ ------ ------------------------------------ 
+
+ [ERROR] Found 11 errors                                                                                                
+
