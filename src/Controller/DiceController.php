@@ -98,10 +98,7 @@ class DiceController extends AbstractController
         $session->set('class', $class);
         $hist = implode(", ", $res);
         $hist .= " ," . $session->get('hist');
-        // $test = strrev($hist);
         $session->set('hist', $hist);
-        // $allHist = "";
-        // $this->testidk .= $hist;
 
         require_once "../bin/bootstrap.php";
 
@@ -114,18 +111,6 @@ class DiceController extends AbstractController
             // Add gamble to bank
             $remove = $session->get('bank') + $session->get('gamble');
             $session->set('bank', $remove);
-            // Add dices to Histogram
-            $fix = substr($session->get('hist'), 0, -2);
-            $histogram = strrev($fix);
-
-            $histClass = new Histogram();
-            $histClass->setDices($histogram);
-            $histClass->setScore($session->get('total'));
-            $histClass->setDate();
-            $histClass->setGame("Dice 21");
-
-            $entityManager->persist($histClass);
-            $entityManager->flush();
         } else if ($session->get('total') == 21) {
             $something = $session->get('win');
             $session->set('win', $something += 1);
@@ -135,12 +120,11 @@ class DiceController extends AbstractController
             // Remove gamble from bank
             $remove = $session->get('bank') - $session->get('gamble');
             $session->set('bank', $remove);
-            // Add dices to Histogram
+        } else if ($session->get('total') >= 21) {
             $fix = substr($session->get('hist'), 0, -2);
             $histogram = strrev($fix);
 
             $histClass = new Histogram();
-            // Flytta upp de övre 3 raderna?
             $histClass->setDices($histogram);
             $histClass->setScore($session->get('total'));
             $histClass->setDate();
@@ -149,25 +133,6 @@ class DiceController extends AbstractController
             $entityManager->persist($histClass);
             $entityManager->flush();
         }
-
-
-
-        // $hist = implode(", ", $res);
-        // $hist .= " ," . $session->get('hist');
-        // // $test = strrev($hist);
-        // $session->set('hist', $hist);
-        // // $allHist = "";
-        // // $this->testidk .= $hist;
-
-        // $fix = substr($session->get('hist'), 0, -2);
-        // $histogram = strrev($fix);
-        //
-        // $histClass = new Histogram();
-        // $histClass->setDices($histogram);
-        // $histClass->setDate();
-        //
-        // $entityManager->persist($histClass);
-        // $entityManager->flush();
 
         return $this->render('diceGame.html.twig', [
             'total' => $session->get('total'),

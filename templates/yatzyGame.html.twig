@@ -5,6 +5,9 @@
 {% block body %}
 
 {% if section < 7 %}
+{% if userName != " " %}
+<h3>Spelare: {{ userName }}</h3>
+{% endif %}
 <div class="rules">
 <h4>Regler:</h4>
 <ul>
@@ -15,11 +18,6 @@
 </div>
 <h1>Samla på {{ section }}:or</h1>
 <br>
-    {% if userName != " " %}
-    <h3>Namn: {{ userName }}</h3>
-    {% endif %}
-
-
 <p>
     {% for value in listOfDices %}
         <i class="dice-sprite {{ value }}"></i>

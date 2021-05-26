@@ -40,7 +40,7 @@ class HighscoreTest extends TestCase
     }
 
     /**
-     * Check that setDate() and getDate() works.
+     * Check that setUserName() and getUserName() works.
      */
     public function testUsername()
     {

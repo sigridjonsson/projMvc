@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 class GraphicalDiceTest extends TestCase
 {
     /**
-     * Check that roll() returns the right amount of dices.
+     * Check that GraphicalDice() works and graphic() returns a string.
      */
     public function testGraphic()
     {
@@ -23,16 +23,4 @@ class GraphicalDiceTest extends TestCase
         $res = gettype($controller->graphic());
         $this->assertSame($exp, $res);
     }
-
-    //  /**
-    //   * Check that getLastRoll() returns the right dices.
-    //   */
-    // public function testGetLastRoll()
-    // {
-    //     $controller = new DiceHand();
-    //
-    //     $exp = $controller->roll();
-    //     $res = $controller->getLastRoll();
-    //     $this->assertSame($exp, $res);
-    // }
 }
