@@ -8,7 +8,9 @@
 
 A website made with Symfony and Doctrine where you can play the dice game 21 and
 Yatzy. All games are tracked and either all dices, the score or both are saved in a
-database. The result is displayed on the website.
+database. The result is displayed on the website.   
+This is made as the final project of the course [mvc](https://dbwebb.se/kurser/mvc-v1)
+at BTH.
 
 Get going
 -----------------------------------
@@ -16,8 +18,5 @@ To get going with the application install the essentials.
 ```
 composer install
 ```
-
-This is made as the final project of the course [mvc](https://dbwebb.se/kurser/mvc-v1)
-at BTH.
 
 ![Dices](public/dices.svg.png)
