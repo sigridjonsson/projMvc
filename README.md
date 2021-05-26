@@ -6,5 +6,18 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/sigridjonsson/projMvc/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/sigridjonsson/projMvc/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/sigridjonsson/projMvc/badges/build.png?b=master)](https://scrutinizer-ci.com/g/sigridjonsson/projMvc/build-status/master)
 
-A website made with Symfony where you can play the dice game 21 and Yatzy. This
-is made as the final project of the course [mvc](https://dbwebb.se/kurser/mvc-v1) at BTH.
+A website made with Symfony and Doctrine where you can play the dice game 21 and
+Yatzy. All games are tracked and either all dices, the score or both are saved in a
+database. The result is displayed on the website.
+
+Get going
+-----------------------------------
+To get going with the application install the essentials.
+```
+composer install
+```
+
+This is made as the final project of the course [mvc](https://dbwebb.se/kurser/mvc-v1)
+at BTH.
+
+![Dices](public/dices.svg.png)
