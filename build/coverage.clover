@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1622048874">
-  <project timestamp="1622048874">
+<coverage generated="1622124483">
+  <project timestamp="1622124483">
     <file name="/Users/sigridjonsson/dbwebb-kurser/mvc/me/proj/src/Controller/DiceController.php">
       <class name="App\Controller\DiceController" namespace="global">
         <metrics complexity="23" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="149" coveredstatements="0" elements="152" coveredelements="0"/>
