@@ -19,4 +19,5 @@ Install the essentials to get going with the application.
 composer install
 ```
 
-![Dices](public/dices.svg.png)
+![Game](public/game.png)
+![Histogram](public/histogram.png)
