@@ -19,5 +19,8 @@ Install the essentials to get going with the application.
 composer install
 ```
 
+Screenshots
+-----------------------------------
 ![Game](public/game.png)
+
 ![Histogram](public/histogram.png)
